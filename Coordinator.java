@@ -25,7 +25,7 @@ import resources.DrawingBoard;
 			DrawingBoard board = new DrawingBoard(200, 0, 500, 700);
 			Graphics g = board.getCanvas();
 			Timer timer = new Timer();
-			Hack hack = new Hack();
+
 			
 			
 			TetrisObject tObj = createTetrisObject();
@@ -42,11 +42,7 @@ import resources.DrawingBoard;
 //Tetris game and when score reaches 30 then virus starts which 
 //starts music and memes
 				if(count%30==0) tObj.moveDown(); // did this so the block doesn't move down too fast
-				tObj.draw(g);
-				if (score==0) {
-					hack.beAnnoying();
-					break;
-				}
+				tObj.draw(g);	
 				
 				g.setColor(Color.BLACK);
 				g.drawString("Score=" + score, 40, 30);
